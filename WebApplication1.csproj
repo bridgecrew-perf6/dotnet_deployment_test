@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ApplicationInsightsResourceId>/subscriptions/60847ae2-2261-4478-868e-1fb2547d05fe/resourceGroups/appsvc_linux_centralus/providers/microsoft.insights/components/dotnet_core</ApplicationInsightsResourceId>
+    <UserSecretsId>6b8084b6-20f6-4cb0-a01c-f8265621c81c</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
+  </ItemGroup>
 
 </Project>
