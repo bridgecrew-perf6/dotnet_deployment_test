@@ -33,5 +33,12 @@ steps:
     - task: PublishBuildArtifacts@1
       displayName: "Upload Artifacts"
       inputs:
-        pathtoPublish: '$(Build.ArtifactStagingDirectory)' 
+        pathtoPublish: '$(System.DefaultWorkingDirectory)' 
         artifactName: 'testLinuxApp'
+    - task: AzureRmWebAppDeployment@4
+      inputs:
+      ConnectionType: 'AzureRM'
+      azureSubscription: 'Aaron_Azure(60847ae2-2261-4478-868e-1fb2547d05fe)'
+      appType: 'webAppLinux'
+      WebAppName: 'WebApplication120201208094507'
+      packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
