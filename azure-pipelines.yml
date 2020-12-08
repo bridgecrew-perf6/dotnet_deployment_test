@@ -33,7 +33,7 @@ steps:
     - task: PublishBuildArtifacts@1
       displayName: "Upload Artifacts"
       inputs:
-        pathtoPublish: '$(System.DefaultWorkingDirectory)' 
+        pathtoPublish: '$(System.DefaultWorkingDirectory)/' 
         artifactName: 'testLinuxApp'
     - task: AzureRmWebAppDeployment@4
       inputs:
